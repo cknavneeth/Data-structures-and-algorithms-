@@ -57,8 +57,7 @@ function findingTheLongestPrefix(root){
         prefix+=String.fromCharCode(nextIndex+'a'.charCodeAt())
         curr=curr.child[nextIndex]
     }
-   return prefix
-    
+    return prefix   
 }
 
 
@@ -104,11 +103,8 @@ function deleteHelper(node,word,index){
     if(charneedtodelete){
         node.child[charIndex]=null
         return !node.wordEnd&&node.child.every(item=>item==null)
-
     }
-
     return false
-
 }
 
 
@@ -127,4 +123,4 @@ for(let word of arr){
 
 console.log(searchKey(root,'dog'))
 deleting(root,'dog')
-console.log(searchKey(root,'doctor'))
+console.log(searchKey(root,'dog'))
